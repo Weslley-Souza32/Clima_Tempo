@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Clima Tempo</title>
+  </head>
+  <body>
+    <main>
+      <h1>Condição do Tempo</h1>
+      <section id="search-form">
+        <form>
+          <div class="form__group field">
+            <input
+              type="input"
+              class="form__field"
+              placeholder="Name"
+              name="name"
+              id="input-localizacao"
+              required
+            />
+            <label for="name" class="form__label">Localização</label>
+          </div>
+          <button id="btn-search">Pesquisar</button>
+        </form>
+      </section>
+      <section id="weather-info"></section>
+    </main>
+    <script src="js/index.js"></script>
+  </body>
+</html>

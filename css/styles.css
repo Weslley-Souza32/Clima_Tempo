@@ -1,0 +1,123 @@
+body {
+  background-color: #222;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+main {
+  padding: 2rem;
+  max-width: 800px;
+  background-color: #333;
+  border-radius: 10px;
+  box-shadow: 4px 3px 30px #fff;
+}
+
+main > h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+main #search-form form {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.form__group {
+  position: relative;
+  padding: 15px 0 0;
+  width: 50%;
+  flex: 1;
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 1.3rem;
+  color: #fff;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+
+  &::placeholder {
+    color: transparent;
+  }
+
+  &:placeholder-shown ~ .form__label {
+    font-size: 1.3rem;
+    cursor: text;
+    top: 20px;
+  }
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #9b9b9b;
+}
+
+.form__field:focus {
+  ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #11998e;
+    font-weight: 700;
+  }
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, #11998e, #38ef7d);
+  border-image-slice: 1;
+}
+/* reset input */
+.form__field {
+  &:required,
+  &:invalid {
+    box-shadow: none;
+  }
+}
+
+main #search-form button {
+  background-color: green;
+  color: #fff;
+  border: none;
+  padding: 0 1rem;
+  height: 32px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 700;
+  margin-top: 2rem;
+}
+main #search-form button:hover {
+  background-color: rgba(60, 211, 60, 0.7);
+}
+
+main #weather-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main #weather-info .weather-data h2 {
+  font-size: 18px;
+  margin-bottom: 0.2rem;
+}
+
+main #weather-info .weather-data span {
+  font-size: 3rem;
+  font-weight: bold;
+}
